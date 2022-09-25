@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>resources access page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main_2.css">
+    </head>
+    <body >
+        <h3>Humanly soul MAP</h3>
+        <div class="box">
+            <i class="fas fa-notes-medical"></i>
+            
+            <p>Here you can enter your location to access the nearest resources for hospitals. <br>Enter your city:</p><br>
+            <input class="input" type="text" name="city" style= "border:2; border-color: aqua;" id="city3">
+            <div class="location" >
+                <a onclick="provideloc3()" id="location3" class="btn"><br>Find now<span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-notes-medical"></i>
+
+            <p>Here you can enter your location to access the nearest resources for transport. <br>Enter your city:</p><br>
+            <input class="input" type="text" name="city" style= "border:2; border-color: aqua;" id="city">
+            <div class="location" >
+                <a onclick="provideloc()" id="location" class="btn"><br>Find now<span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+        <br>
+        <div class="box">
+            <i class="fas fa-notes-medical"></i>
+            
+            <p>Here you can enter your location to access the nearest resources for medical store. <br>Enter your city:</p><br>
+            <input class="input" type="text" name="city" style= "border:2; border-color: aqua;" id="city2">
+            <div class="location" >
+                <a onclick="provideloc2()" id="location2" class="btn"><br>Find now<span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+        <br>
+        
+        
+        
+
+    </div>
+    
+</section>
+
+<!-- services section ends -->
+
+<script>
+    function provideloc ()
+    {
+        var location = document.getElementById('city').value;
+
+        document.getElementById('location').href = "https://www.google.com/maps/search/transport+near+"+location+"/";
+    }
+</script>
+<script>
+    function provideloc2 ()
+    {
+        var location2 = document.getElementById('city2').value;
+
+        document.getElementById('location2').href = "https://www.google.com/maps/search/medical+stores+near+"+location2+"/";
+    }
+</script>
+<script>
+    function provideloc3 ()
+    {
+        var location3 = document.getElementById('city3').value;
+
+        document.getElementById('location3').href = "https://www.google.com/maps/search/hospitals+near+"+location3+"/";
+    }
+</script>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer></script>
+    </body>
+</html>

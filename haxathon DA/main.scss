@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --green:#216b99;
+    --black:#444;
+    --light-color:#777;
+    --box-shadow:.5rem .5rem 0 rgba(35, 179, 215, 0.2);
+    --text-shadow:.4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border:.2rem solid var(--green);
+    
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-transform: none;
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding:2rem 9%;
+    background-color: #216b99;
+}
+
+section:nth-child(even){
+    background: #216b99;
+} 
+.header .navbar{
+    display: none;
+}
+
+
+.header{
+    z-index: 10000;
+    padding:0.002em 20%;
+
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    display:flex;
+    justify-content: space-between;
+    scale: 0.31;
+    margin-top: -0.9em;
+}
+
+svg{
+    width: 2em;
+    scale: 1.2;
+    margin-top: -7.3em;
+    margin-left:28em;
+    align-items: right;
+    position: fixed;
+}
+
+nav{
+    position: fixed;
+    right: -.25em;
+    top:-.50em;
+    background: rgb(51, 51, 51);
+    height:100vh;
+    width: 50%;
+    z-index: 1000;
+    text-transform: uppercase;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin-top: 5em;
+        right:4em;
+        a{
+            color:rgb(36, 93, 200);
+            padding: .2em 2.4em;
+            display: block;
+            
+            &:hover{
+                background:rgba(64, 137, 196, 0.32);
+            }
+        }
+    
+    }
+    img{
+
+        float: right;
+        margin: 2em;
+        width: 2em;
+
+    }
+}
+
+.header .logo{
+    z-index: 1000;
+    margin-right: 10em;
+    width: 50%;
+    margin-left: 2em;
+    
+    
+    font-size: 2.5rem;
+    color: var(--black);
+    
+}
+
+.header img{
+    scale: 0.99;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    margin-top: 4em;
+    padding: 0.5;
+    align-self: left;
+    margin-left: -46em;
+    
+   
+    color: white;
+  
+}
+
+
+.header .search-container{
+    background: rgb(185, 185, 185);
+    color: #777;
+    height: 3.5em;
+    scale: 0.0001;
+    padding: 0.6em;
+    scale: 1.6;
+    margin-left: -7em;
+    margin-right: 7em;
+    margin-top: 6em;
+    z-index: 500;
+    
+
+    
+    border-radius: 0.4em;
+    
+    
+}
+.header .search-container .search{
+   width: 30%;
+   z-index: 600;
+   padding: 3em;
+   margin-right: -1em;
+   margin-top: 2em;
+
+    
+}
+
+.header .search-container .form{
+
+    margin-top: -4.9em;
+    margin-left: -2.5em;
+
+}
+.header .search-icon{
+    scale:2.3;
+    margin-top: 6em;
+    margin-left: -0.6em;
+    z-index: 600;
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 750px;
+    position: relative;
+    margin: auto;
+    height: 22em;
+    z-index: 90;
+    margin-top: 10em;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    
+  }
+  .mySlides img{
+      border-radius: 2.6em;
+      scale: 0.96;
+  }
+  /* dots placement*/
+  .dots{
+      position: relative;
+      z-index: 100;
+      margin-top: -13.8em;
+      scale: 0.45;
+  }
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -4em;
+    padding: 7px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 012px 12px  0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius:12px  0 012px ;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    margin-bottom: -1.5em;
+    color: #052f3e;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  .content{
+    margin-left: -31em;
+    margin-right: 1.2em;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 4rem;
+    scale: 0.78;
+    padding: .5rem;
+    padding-top: 1em;
+    padding-left: 2rem;
+    padding-right: -1em;
+    padding-bottom: 4em;
+    border:var(--border);
+    border-radius: 0.9em;
+    box-shadow: var(--box-shadow);
+    color:var(--green);
+    cursor: pointer;
+    font-size: 1.7rem;
+    background: #fff;
+    height: 12em;
+    margin-right: -6em;
+    margin-left: -1.4em;
+    
+}
+
+.btn span{
+    padding:.7rem 1rem;
+    border-radius: 1.5em;
+    background: var(--green);
+    color:#fff;
+    margin-left: .5rem;
+}
+
+.btn:hover{
+    background: var(--green);
+    color:#fff;
+}
+
+.btn:hover span{
+    color: var(--green);
+    background:#fff;
+    margin-left: -2rem;
+}
+
+  
+.tiles .content{
+    display: grid;
+    margin-bottom: 2em;
+    margin-left: -30em;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 0.2fr));
+    gap:0.3rem;
+    scale: 1.03;
+    margin-top: -3em;
+    margin-right: 8em;
+    margin-left: -29em;
+
+}
+.tiles .content .t_txxt{
+    margin-top: -0.2em;
+    margin-left: -0.7em;
+    height: 0.4em;
+}
+.tiles .content .t_text{
+   margin-left: -1.8em;
+   margin-right: 5em;
+    scale: 0.7;
+}
+
+.footer{
+    scale: 0.97;
+    margin-bottom: 2;
+    background-color: #216b99;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap:2rem;
+
+}
+
+
+.footer .box-container .boxi h3{
+    font-size: 1.4rem;
+    color:var(--black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .boxi a{
+    display: block;
+    font-size: 1.5rem;
+    color:black;
+    padding: 1rem 0;
+}
+
+.footer .box-container .boxi a i{
+    padding-right: -2rem;
+    color:#221fdc;
+}
+
+.footer .box-container .boxi a:hover i{
+    padding-right:1.5rem;
+}
+
+.footer .credit{
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color:rgb(0, 0, 0);
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.footer .credit span{
+    color:#000000;
+}
+
+.open-nav{
+    transform: translateX(0)
+}    
+
+.navibar{
+    display: none;
+}
+
+
+@media only screen and (min-width: 680px) {
+
+    .hammenu {
+        display: none;
+      }
+    .nav {
+        display: none;
+        
+      }
+      .header{
+        z-index: 10000;
+        padding:0.002em 20%;
+    
+        position: fixed;
+        top:0; left: 0; right: 0;
+        z-index: 1000;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        margin-left: -8em;
+        margin-right: -20em;
+        scale: 0.89;
+        
+       
+    }
+    
+
+    
+    }
+    
+    .header img{
+        scale: 1.38;
+        position: relative;
+        width: 10%;
+        height: auto;
+        margin-top: 0.55em;
+        margin-right: 70em;
+        margin-left: -25em;
+        color: white;
+      
+    }
+    .navibar{
+        z-index: 1000;
+        margin-right: 3em;
+        position: relative;
+        
+    }
+    .navibar a{
+        font-size: 1.7rem;
+        color: var(--light-color);
+        margin-left: 2rem;
+       
+    }
+    
+    .navibar a:hover{
+        color: rgb(17, 40, 75);
+    }
+    
+    
+    
+    .header .search-container{
+        background: rgb(185, 185, 185);
+        color: #777;
+        height: 3.7em;
+        scale: 1.2;
+        padding: 0.8em;
+        margin-top: -0.7em;
+        
+        border-radius: 0.4em;
+        margin-left: -50em;
+        margin-right: 1em;
+        
+    }
+    
+    .header .search-icon{
+        scale:2.3;
+        margin-top: 6em;
+        margin-right: 55em;
+        margin-top: -0.8em;
+       
+    }
+    
+    /* Slideshow container */
+.slideshow-container {
+    max-width: 750px;
+    position: relative;
+    margin: auto;
+    height: 33em;
+    z-index: 90;
+    margin-top: 10em;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    
+  }
+  .mySlides img{
+      border-radius: 2.6em;
+  }
+  /* dots placement*/
+  .dots{
+      position: relative;
+      z-index: 100;
+      scale: 0.78;
+      margin-top: -10em;
+  }
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -2.2em;
+    padding: 14px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius:12px 12px 12px 12px ;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius:12px 12px 12px 12px ;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    margin-bottom: -1.5em;
+    color: #052f3e;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+
+.text_h{
+    margin-top: 2em;
+    font-size: 30px;
+
+}
+
+  .footer{
+
+    background-color: #2a8cc9;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap:2rem;
+}
+
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    color:var(--white-color);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i{
+    padding-right: -2rem;
+    color:#0e3349
+}
+
+.footer .box-container .box a:hover i{
+    padding-right:1.5rem;
+}
+
+.footer .credit{
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color:rgb(99, 99, 99);
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.footer .credit span{
+    color:rgb(22, 61, 130);
+}
+
+
+
+@keyframes movedown{
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes movein{
+    from{
+        transform: translateX(-150px);
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes movecrow{
+    from{
+        transform: translateX(150px);
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

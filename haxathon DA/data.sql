@@ -1,0 +1,1 @@
+create table donors_info (NAME VARCHAR(20), e_mail varchar(20), contact_no number(13) primary key, perm_address varchar(50), adhaarcard_no number(14));
